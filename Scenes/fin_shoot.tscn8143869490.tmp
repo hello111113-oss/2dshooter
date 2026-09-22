@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dxq1m3clnu1an"]
+
+[ext_resource type="PackedScene" uid="uid://k7swap2ct77o" path="res://Scenes/Backg.tscn" id="1_tdrut"]
+[ext_resource type="Script" uid="uid://ctegd44orkeng" path="res://Scripts/Scene.gd" id="1_uipfr"]
+[ext_resource type="PackedScene" uid="uid://o3b2rpb6t47w" path="res://Scenes/target.tscn" id="3_tdrut"]
+
+[node name="Fin_shoot" type="Node2D" unique_id=1879564523]
+script = ExtResource("1_uipfr")
+
+[node name="Backg" parent="." unique_id=212707819 instance=ExtResource("1_tdrut")]
+
+[node name="Timer" type="Node2D" parent="." unique_id=1703005014]
+
+[node name="TargTimer" type="Timer" parent="Timer" unique_id=1760274793]
+autostart = true
+
+[node name="TargStartpos" type="Node2D" parent="." unique_id=2094478823]
+
+[node name="Marker2D" type="Marker2D" parent="TargStartpos" unique_id=602612539]
+position = Vector2(4369, 375)
+
+[node name="Marker2D2" type="Marker2D" parent="TargStartpos" unique_id=2064533627]
+position = Vector2(4331, -6)
+
+[node name="Target" parent="." unique_id=1218634275 instance=ExtResource("3_tdrut")]
+position = Vector2(0, 2000)
+
+[connection signal="timeout" from="Timer/TargTimer" to="." method="_on_targ_timer_timeout"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d0gs0pl6bjbcp"]
+
+[ext_resource type="Texture2D" uid="uid://2bgt5hkaqahm" path="res://Images/person.png" id="1_10xcd"]
+[ext_resource type="Script" uid="uid://c8die8cel73hl" path="res://Scripts/movements3rd.gd" id="1_74dau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(3222, 1839.5)
+
+[node name="person" type="CharacterBody2D" unique_id=1978055984]
+script = ExtResource("1_74dau")
+metadata/_edit_horizontal_guides_ = [1104.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=533739603]
+position = Vector2(-118, 55)
+scale = Vector2(0.7053333, 0.70533335)
+texture = ExtResource("1_10xcd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1393359970]
+z_index = -2
+position = Vector2(-4, 6.25)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=956497653]
+scale = Vector2(1, 0.9999999)
+zoom = Vector2(0.36, 0.36)
+limit_enabled = false
+limit_left = -1
+limit_top = -1
+limit_right = -1
+limit_bottom = -1
+limit_smoothed = true
+position_smoothing_speed = 50.0

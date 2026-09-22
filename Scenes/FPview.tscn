@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dimtgt34q56v3"]
+
+[ext_resource type="Script" uid="uid://bxsw8aubb8df0" path="res://Scripts/movement1st.gd" id="1_1knvp"]
+[ext_resource type="Texture2D" uid="uid://cpk5hqi4qbjxw" path="res://Images/asset.png" id="2_1knvp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57qmd"]
+radius = 456.5304
+
+[node name="FPview" type="CharacterBody2D" unique_id=1385867046]
+script = ExtResource("1_1knvp")
+
+[node name="Asset" type="Sprite2D" parent="." unique_id=2070822384]
+position = Vector2(27.55, -25.035)
+scale = Vector2(0.30091673, 0.30091667)
+texture = ExtResource("2_1knvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=346869832]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_57qmd")
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=535039827]
+scale = Vector2(1, 0.9999999)
+zoom = Vector2(0.645, 0.645)
+limit_enabled = false
+limit_left = -1
+limit_top = -1
+limit_right = -1
+limit_bottom = -1
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 30.0

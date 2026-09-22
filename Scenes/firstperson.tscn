@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bisxyhl4tfmeu"]
+
+[ext_resource type="PackedScene" uid="uid://k7swap2ct77o" path="res://Scenes/Backg.tscn" id="1_ffbnn"]
+[ext_resource type="PackedScene" uid="uid://dimtgt34q56v3" path="res://Scenes/FPview.tscn" id="2_hikwj"]
+
+[node name="Firstperson" type="Node2D" unique_id=294513637]
+
+[node name="Backg" parent="." unique_id=212707819 instance=ExtResource("1_ffbnn")]
+
+[node name="Timer" type="Node2D" parent="." unique_id=2136607771]
+
+[node name="TargTimer" type="Timer" parent="Timer" unique_id=362768708]
+autostart = true
+
+[node name="TargStartpos" type="Node2D" parent="." unique_id=536394302]
+
+[node name="Marker2D" type="Marker2D" parent="TargStartpos" unique_id=1328953752]
+position = Vector2(4569, 432)
+
+[node name="Marker2D2" type="Marker2D" parent="TargStartpos" unique_id=1537771306]
+position = Vector2(4531, -215)
+
+[node name="Targ" type="Node2D" parent="." unique_id=1856500178]
+
+[node name="FPview" parent="." unique_id=1385867046 instance=ExtResource("2_hikwj")]

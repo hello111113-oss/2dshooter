@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://k7swap2ct77o"]
+
+[ext_resource type="Texture2D" uid="uid://bbwik73wtdtwl" path="res://Images/bg.png" id="1_sq17f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(390, 3330)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(4454, 282)
+
+[node name="Backg" type="Sprite2D" unique_id=212707819]
+z_index = -2
+scale = Vector2(2.1542153, 0.6666667)
+texture = ExtResource("1_sq17f")
+
+[node name="Bound" type="Node2D" parent="." unique_id=852367705]
+scale = Vector2(1.0421427, 1.02)
+
+[node name="Boarder" type="StaticBody2D" parent="Bound" unique_id=1882275364]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bound/Boarder" unique_id=320632720]
+position = Vector2(-1914, 1)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Boarder2" type="StaticBody2D" parent="Bound" unique_id=2104365081]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bound/Boarder2" unique_id=2061549688]
+position = Vector2(1928, 39)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bound" unique_id=1098391999]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bound/StaticBody2D" unique_id=2132164112]
+position = Vector2(-4, -1516)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Bound" unique_id=590885118]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bound/StaticBody2D2" unique_id=798018175]
+position = Vector2(67, 1493)
+shape = SubResource("RectangleShape2D_57qmd")
